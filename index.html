@@ -1,100 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progate</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="stylesheet" type="text/css" href="responsive.css">
-  <link rel="shortcut icon" href="favicon.ico" >
-  <!--     ┬ ┬┌─┐  ┌─┐┬─┐┌─┐        -->
-  <!--     │││├┤   ├─┤├┬┘├┤         -->
-  <!--     └┴┘└─┘  ┴ ┴┴└─└─┘        -->
-  <!--     ╔═╗╦═╗╔═╗╔═╗╔═╗╔╦╗╔═╗    -->
-  <!--     ╠═╝╠╦╝║ ║║ ╦╠═╣ ║ ║╣     -->
-  <!--     ╩  ╩╚═╚═╝╚═╝╩ ╩ ╩ ╚═╝    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitkort</title>
+    <style>
+        /* Lägger ihop text */
+        #fn,
+        #ln {
+            display: inline-block;
+            margin-right: 2px;
+        }
+        /* Mall för visitkort */
+        body {
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .visitkort {
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: left;
+        }
+        /* Olika textformer för kort */
+        .visitkort h1 {
+            line-height: 0.6;
+            font-size: 24px;
+            margin-bottom: 0px;
+        }
+        .visitkort h2 {
+            line-height: 0.6;
+            font-size: 16px;
+            margin-bottom: 0px;
+        }
+        .visitkort p {
+            line-height: 0.6;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-      <div class="container">
-        <div class="header-left">
-          <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
-        </div>
-        <span class="fa fa-bars menu-icon"></span>
-        <div class="header-right">
-          <a href="#">Lessons</a>
-          <a href="#">Sign in</a>
-          <a href="#" class="login">Log in</a>
-        </div>
-      </div>
-    </header>
-    <div class="top-wrapper">
-      <div class="container">
-        <h1>LEARN TO CODE.</h1>
-        <h1>LEARN TO BE CREATIVE.</h1>
-        <p>Progate is a web service where you can learn programming online.</p>
-        <p>We offer you a fully equipped coding environment to get you started.</p>
-        <div class="btn-wrapper">
-          <a href="#" class="btn signup">Sign up with Email</a>
-          <p>or</p>
-          <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Sign up with Facebook</a>
-          <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Sign up with Twitter</a>
-        </div>
-      </div>
-    </div>
-    <div class="lesson-wrapper">
-      <div class="container">
-        <div class="heading">
-          <h2>Learn Where to Get Started!</h2>
-        </div>
-        <div class="lessons">
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/html.png">
-              <p>HTML & CSS</p>
-            </div>
-            <p class="text-contents">Languages used to build and design the appearances of your websites. HTML adds the structure, and CSS styles it.</p>
-          </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-              <p>jQuery</p>
-            </div>
-            <p class="text-contents">A fast, feature-rich and easy-to-use JavaScript library that handles animations and Ajax requests.</p>
-          </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/ruby.png">
-              <p>Ruby</p>
-            </div>
-            <p class="text-contents">A dynamic, general-purpose language that is simple and productive. It is commonly used around the world to build web applications.</p>
-          </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/php.png">
-              <p>PHP</p>
-            </div>
-            <p class="text-contents">An open source scripting language that can be embedded into HTML, and well suited for web development.</p>
-          </div>
-          <div class="clear"></div>
-        </div>
-      </div>
-    </div>
-    <div class="message-wrapper">
-      <div class="container">
-        <div class="heading">
-          <h2>Ready to become an awesome programmer?</h2>
-          <h3>Let's learn to code, learn to be creative!</h3>
-        </div>
-        <span class="btn message">Start Learning</span>
-      </div>
-    </div>
-    <footer>
-      <div class="container">
-        <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-        <p>Learn to code, learn to be creative.</p>
-      </div>
-    </footer>
-  </body>
+  <!-- Inputruta med en massa olika inputs -->
+  <div id="input">
+    <h2>Beställ ditt visitkort:</h2>
+
+    <!-- textinputs -->
+    <p>Företag:</p>
+    <input type="text" id="company" />
+    <p>Förnamn:</p>
+    <input type="text" id="fname" />
+    <p>Efternamn:</p>
+    <input type="text" id="lname" />
+    <p>Titel:</p>
+    <input type="text" id="title" />
+    <p>Telefon:</p>
+    <input type="text" id="phone" />
+    <p>E-post:</p>
+    <input type="text" id="email" />
+    
+    <!-- 3 olika selectinputs -->
+    <p>Bakgrundsfärg:</p>
+    <select id="bgcolor">
+      <option value=#ff0000>Red</option>
+      <option value=#00ff00>Green</option>
+      <option value=#0000ff>Blue</option>
+    </select>
+    <p>Textfärg:</p>
+    <select id="txtcolor">
+      <option value=#ff0000>Red</option>
+      <option value=#00ff00>Green</option>
+      <option value=#0000ff>Blue</option>
+    </select>
+    <p>Typsnitt:</p>
+    <select name="Typsnitt" id="txttype">
+      <option value="Arial">Arial</option>
+      <option value="Times New Roman">Times New Roman</option>
+    </select>
+    
+    <!-- 2 Knappar -->
+    <p>
+      <input type="button" id="res" value="Nollställ" /> 
+      <input type="button" id="show" value="Skriv ut" />
+    </p>
+  </div>
+
+  <!-- Själva visitkortet som visas -->
+  <div class="visitkort" id="card">
+      <h1 id="co"></h1>
+      <h2 id="fn"></h2>
+      <h2 id="ln"></h2>
+      <p id="ti"></p>
+
+      <h2 id="ph"></h2>
+      <p id="em"></p>
+      <!-- Knapp som inte gör något, men annars skulle "skriva ut" visitkortet -->
+      <button onclick="skrivUtVisitkort()">Skriv Ut</button>
+      <input type="button" id="back" value="Tillbaka" />
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){ // Wait for the web page to finish loading
+      // Döljer det tomma kortet
+      document.getElementById("card").style.visibility = "hidden"; 
+
+      document.getElementById('show').addEventListener("click", function(e){ 
+        // Visar kortet och döljer inputformuläret
+        document.getElementById("input").style.visibility = "hidden";
+        document.getElementById("card").style.visibility = "visible";
+
+        // Sätter diverse texter
+        document.getElementById("co").textContent = document.getElementById("company").value;
+        document.getElementById("ln").textContent = document.getElementById("lname").value;
+        document.getElementById("fn").textContent = document.getElementById("fname").value;
+        document.getElementById("ti").textContent = document.getElementById("title").value;
+        document.getElementById("ph").textContent = document.getElementById("phone").value;
+        document.getElementById("em").textContent = "E-mail: " + document.getElementById("email").value;
+
+        // Sätter färger och font
+        document.getElementById("card").style.backgroundColor = document.getElementById("bgcolor").value;
+        document.getElementById("card").style.color = document.getElementById("txtcolor").value;
+        document.getElementById("card").style.fontFamily = document.getElementById("txttype").value; 
+      });
+
+      document.getElementById('back').addEventListener("click", function(e){
+        // Visar inputformuläret och döljer kortet
+        document.getElementById("card").style.visibility = "hidden";
+        document.getElementById("input").style.visibility = "visible";
+      });
+
+      document.getElementById('res').addEventListener("click", function(e){
+        // Nollställer värden
+        document.getElementById("company").value = null;
+        document.getElementById("lname").value = null;
+        document.getElementById("fname").value = null;
+        document.getElementById("title").value = null;
+        document.getElementById("phone").value = null;
+        document.getElementById("email").value = null;
+        
+        // Sätter till default
+        document.getElementById("bgcolor").value = "#ff0000";
+        document.getElementById("txtcolor").value = "#ff0000";
+        document.getElementById("txttype").value = "Arial";
+      });
+    });
+  </script>
+</body>
 </html>
